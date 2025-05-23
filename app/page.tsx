@@ -110,7 +110,8 @@ export default function Home() {
           <img
             src="./girl.png" // Replace with actual image path in public folder
             alt="Thanmayi"
-            className="w-45 h-45 rounded-full object-cover border-4 "
+            className="w-45 h-45 rounded-full object-cover border-4 border-transparent"
+ 
           />
         </div>
       </div>

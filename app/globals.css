@@ -7,3 +7,45 @@
 
 
 
+/* globals.css */
+
+.theme-switcher {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--tw-border-color, #e5e7eb);
+  border-radius: 0.75rem;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.dark .theme-switcher {
+  background-color: #1f1f1f;
+  border-color: #3f3f46;
+}
+
+.theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 0.5rem;
+  color: #6b7280;
+  transition: all 0.2s ease;
+}
+
+.theme-btn:hover {
+  color: #111827;
+}
+
+.dark .theme-btn:hover {
+  color: #f4f4f5;
+}
+
+.theme-btn.active {
+  color: #38a169;
+  box-shadow: 0 0 0 2px rgba(56, 161, 105, 0.3);
+}

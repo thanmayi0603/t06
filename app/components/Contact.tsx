@@ -129,16 +129,16 @@ const ContactPage: React.FC = () => {
 
     
     return (
-        <div className="max-w-xl mx-auto px-6 py-12 relative text-gray-800 dark:text-gray-100">
+        <div className="max-w-xl mx-auto px-6 py-12 relative  dark:text-gray-100">
             <Toaster />
             <h1 className="text-4xl font-bold mb-2 font-peachi text-left">Contact me</h1>
-            <p className="text-gray-700 dark:text-neutral-300 text-left mb-2">
+            <p className="dark:text-neutral-300 text-left mb-2">
                  Feel free to send me a message, I
                 will get back to you as soon as possible.
             </p>
             <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                    <label htmlFor="email" className="block text-gray-700 dark:text-white">
+                    <label htmlFor="email" className="block dark:text-white">
                         Your email address <span className="text-gray-400">(required)</span>
                     </label>
                     <input
@@ -149,12 +149,12 @@ const ContactPage: React.FC = () => {
                         onChange={handleChange}
                         required
                         placeholder="you@example.com"
-                        className="w-full p-4 rounded bg-gray-100 dark:bg-neutral-800 border border-gray-300 dark:border-neutral-600 text-gray-800 dark:text-white focus:outline-none focus:border-[#38A662]"
+                        className="w-full p-4 rounded  dark:bg-neutral-800 border border-gray-300 dark:border-neutral-600  dark:text-white focus:outline-none focus:border-[#38A662]"
                     />
                 </div>
 
                 <div className="space-y-2">
-                    <label htmlFor="message" className="block text-gray-700 dark:text-white">
+                    <label htmlFor="message" className="block  dark:text-white">
                         Your message <span className="text-gray-400">(required)</span>
                     </label>
                     <textarea
@@ -164,7 +164,7 @@ const ContactPage: React.FC = () => {
                         onChange={handleChange}
                         required
                         rows={6}
-                        className="w-full p-4 rounded bg-gray-100 dark:bg-neutral-800 border border-gray-300 dark:border-neutral-600 text-gray-800 dark:text-white focus:outline-none focus:border-[#38A662]"
+                        className="w-full p-4 rounded dark:bg-neutral-800 border border-gray-300 dark:border-neutral-600 text-gray-800 dark:text-white focus:outline-none focus:border-[#38A662]"
                     />
                 </div>
 
@@ -172,24 +172,24 @@ const ContactPage: React.FC = () => {
                    
 
                     <div className="space-y-2">
-                        <label className="block text-gray-700 dark:text-white">Category</label>
+                        <label className="block dark:text-white">Category</label>
                         <div className="flex space-x-2">
                             <button
                                 type="button"
-                                className={`p-3 rounded bg-gray-100 dark:bg-neutral-800 border ${formData.category === "general"
+                                className={`p-3 rounded  dark:bg-neutral-800 border ${formData.category === "general"
                                     ? "border-[#38A662]"
                                     : "border-gray-300 dark:border-neutral-600"
-                                    } text-gray-700 dark:text-white px-4`}
+                                    }  dark:text-white px-4`}
                                 onClick={() => handleCategorySelect("general")}
                             >
                                 general
                             </button>
                             <button
                                 type="button"
-                                className={`p-3 rounded bg-gray-100 dark:bg-neutral-800 border ${formData.category === "help"
+                                className={`p-3 rounded dark:bg-neutral-800 border ${formData.category === "help"
                                     ? "border-[#38A662]"
                                     : "border-gray-300 dark:border-neutral-600"
-                                    } text-gray-700 dark:text-white px-4`}
+                                    }  dark:text-white px-4`}
                                 onClick={() => handleCategorySelect("help")}
                             >
                                 help
@@ -198,15 +198,15 @@ const ContactPage: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="space-y-2">
+                {/* <div className="space-y-2">
                     <label className="block text-gray-700 dark:text-white">Verification</label>
                     <div ref={turnstileRef} className="cf-turnstile"></div>
-                </div>
+                </div> */}
 
                 <button
                     type="submit"
                     disabled={isSubmitting || !turnstileToken}
-                    className="cursor-pointer transition-all bg-[#38A662] text-white px-6 py-2 rounded-[4px] border-[#2D8A4D] w-full border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px] disabled:bg-gray-400 disabled:border-gray-500 disabled:cursor-not-allowed"
+                    className="cursor-pointer transition-all bg-[#38A662] text-white px-6 py-2 rounded-[4px] border-[#2D8A4D] w-full border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px] "
                 >
                     {isSubmitting ? (
                         <>
@@ -221,8 +221,8 @@ const ContactPage: React.FC = () => {
 
             <p className="mt-4 text-gray-700 dark:text-white">
                 You can also contact me at{" "}
-                <a href="mailto:maneshtamang833@gmail.com" className="text-[#38A662]">
-                    maneshtamang833@gmail.com
+                <a href="mailto:thanmayithanmayi81@gmail.com" className="text-[#38A662]">
+                    thanmayithanmayi81@gmail.com
                 </a>
             </p>
 

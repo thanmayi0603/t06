@@ -22,9 +22,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
        <body >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-   <div className="fixed right-4 top-1/2 -translate-y-1/2 z-50 shadow-md rounded-2xl bg-white dark:bg-neutral-900 border dark:border-neutral-800 p-1">
+   <div className="fixed right-4 top-1/2 -translate-y-1/2 z-50  rounded-2xl p-1">
             <ThemeSwitcher />
           </div>
+      {/* <div className="flex items-center space-x-4 fixed right-4 top-1/2 -translate-y-1/2 z-50  rounded-2xl  p-1">
+  <ThemeSwitcher />
+</div> */}
+
+
+
+  
+  
+
+
+
         <main className="max-w-4xl mx-auto px-4">
           <Navbar />
           {children}
